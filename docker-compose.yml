@@ -1,5 +1,6 @@
 services:
   ai-service:
+    image: ${DOCKERHUB_USERNAME:-seekgpt}/seekgpt-ai-service:latest
     build: ./ai-service
     ports:
       - "8001:8001"
@@ -9,6 +10,7 @@ services:
       - ./ai-service/chroma_db:/app/chroma_db
 
   backend:
+    image: ${DOCKERHUB_USERNAME:-seekgpt}/seekgpt-backend:latest
     build: ./Backend
     ports:
       - "8080:8080"
@@ -20,6 +22,7 @@ services:
       - ai-service
 
   frontend:
+    image: ${DOCKERHUB_USERNAME:-seekgpt}/seekgpt-frontend:latest
     build: ./Frontend
     ports:
       - "5173:80"

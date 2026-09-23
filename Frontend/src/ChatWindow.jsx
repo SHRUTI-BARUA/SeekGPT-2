@@ -87,9 +87,9 @@ function ChatWindow() {
                 </div>
             }
             <Chat></Chat>
-            {loading && <p style={{textAlign:"center",color:"#aaa",fontSize:"13px"}}>⏳ Thinking… (this may take 5–10 seconds)</p>}
+            {loading && <p style={{ textAlign: "center", color: "#aaa", fontSize: "13px" }}>⏳ Thinking… (this may take 5–10 seconds)</p>}
             <ScaleLoader color='#fff' loading={loading}></ScaleLoader>
-            {error && <p style={{textAlign:"center",color:"#f55",fontSize:"13px"}}>⚠️ {error}</p>}
+            {error && <p style={{ textAlign: "center", color: "#f55", fontSize: "13px" }}>⚠️ {error}</p>}
             <div className="chatInput">
                 <div className="inputBox">
                     <label htmlFor="image-upload" title="Upload image" style={{ cursor: "pointer", padding: "0 8px", opacity: imageFile ? 1 : 0.5 }}>
